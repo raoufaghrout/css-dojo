@@ -1,1 +1,1 @@
-$(function(){Reveal.initialize({controls:!0,progress:!0,history:!0,center:!0,slideNumber:!1,mouseWheel:!0,previewLinks:!0,transition:"none",dependencies:[]}),hljs.initHighlightingOnLoad()});
+$(function(){Reveal.initialize({controls:!0,progress:!0,history:!0,center:!0,slideNumber:!1,mouseWheel:!0,transition:"none",dependencies:[]}),hljs.initHighlightingOnLoad()});

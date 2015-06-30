@@ -20,29 +20,44 @@ bundle install
 This project uses [Middleman](http://middlemanapp.com) for ease of use.
 
 ```sh
-# Run local server at http://localhost:4567/
+# Run local server in-memory at http://localhost:4567/
 bundle exec middleman
+
+# Build project to ./build
+bundle exec middleman build
 ```
 
-## Session #1
+## What to do
 
-* Layout & Box Model *
+### Session #1
 
+*Layout & Box Model*
 
+The structure of the project is straight forward. Under `./sources` you'll find all of your assets.
 
-## Session #2
+The aim of this session is to style `index.html` as explained with minimal markup changes.
 
-* Form Styling & Pseudos *
+> #### Optional:
+> Since the build uses Middleman you can use ERB or HAML templates for generating HTML and SASS for your CSS. To keep
+> things simple, I've left everything as plain old HTML and CSS.
 
+### Session #2
 
-## Session #3
+*Form Styling & Pseudos*
 
-* Responsive & Media Queries *
+The aim of this session is to style form elements and make use of pseudoclasses and pseudoelements.
 
+### Session #3
 
-## Session #4
+*Responsive & Media Queries*
 
-???
+The aim of this session is to make our website reponsive!
+
+### Session #4
+
+Not Decided.
+
+Animations?
 
 
 ## Useful Links
@@ -51,6 +66,7 @@ bundle exec middleman
 
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - Google!
+- pls no w3Schools
 
 ### Resources
 

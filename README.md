@@ -65,6 +65,7 @@ Animations?
 ### Learn
 
 - [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Understanding Style Precedence in CSS: Specificity, Inheritance, and the Cascade](http://www.vanseodesign.com/css/css-specificity-inheritance-cascaade/)
 - Google!
 - pls no w3Schools
 

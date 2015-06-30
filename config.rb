@@ -1,12 +1,12 @@
-set :host, 'http://oss.jahed.io'
+set :host, 'http://oss.jahed.io/css-dojo'
 
 set :css_dir, './stylesheets'
 set :js_dir, './javascripts'
 set :images_dir, './images'
-# set :relative_links, true
+set :relative_links, true
 
 # activate :automatic_image_sizes
-# activate :relative_assets
+activate :relative_assets
 # activate :directory_indexes
 
 set :markdown_engine, :redcarpet

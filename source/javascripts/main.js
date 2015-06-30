@@ -6,7 +6,6 @@ $(function() {
         center: true,
         slideNumber: false,
         mouseWheel: true,
-        previewLinks: true,
 
         transition: 'none',
 

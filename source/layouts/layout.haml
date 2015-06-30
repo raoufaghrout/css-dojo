@@ -1,0 +1,60 @@
+!!!
+- root_index = current_page.path == 'index.html'
+
+- page_title_with_site = [current_page.data.title, data.site.name].compact.join(" - ")
+- page_title           = [current_page.data.title].compact.join(" - ")
+- if page_title.empty?
+  - page_title = data.site.name
+
+- page_description     = yield_content(:description) || current_page.data.description
+- page_image           = abs_image_url(current_page.data.image || data.site.image)
+
+- html_attrs = {lang:"en-gb", prefix:"og: http://ogp.me/ns#"}
+
+%html{html_attrs}
+  %head
+    %meta{charset:"utf-8"}
+    %meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+
+    %title= page_title_with_site
+    %meta{name:"title", content: page_title_with_site}
+    %meta{name:"description", content: page_description}
+
+    %meta{property:"og:type",        content: "website"}
+    %meta{property:"og:site_name",   content: data.site.name}
+    %meta{property:"og:title",       content: page_title}
+    %meta{property:"og:description", content: page_description}
+    %meta{property:"og:url",         content: abs_url(current_page.url)}
+    %meta{property:"og:image",       content: page_image}
+    %meta{property:"og:locale",      content: "en_GB"}
+
+    %meta{name:"twitter:card",        content: "summary"}
+    %meta{name:"twitter:site",        content: "@hedjahead"}
+    %meta{name:"twitter:title",       content: page_title}
+    %meta{name:"twitter:description", content: page_description}
+    %meta{name:"twitter:image",       content: page_image}
+
+    =favicon_tag data.site.icon
+    %link{rel:"apple-touch-icon-precomposed", href:data.site.image}
+
+    = stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    = stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/zenburn.min.css"
+    = stylesheet_link_tag "print/paper", media: 'print'
+    = stylesheet_link_tag "main"
+    - if current_page.data.styles?
+      - current_page.data.styles.each do |style|
+        = stylesheet_link_tag style
+
+  %body{class:page_classes}
+    .reveal
+      .slides
+        =yield
+
+    = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    = javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"
+    = javascript_include_tag "lib/reveal"
+    = javascript_include_tag "main"
+
+    - if current_page.data.scripts?
+      - current_page.data.scripts.each do |script|
+        = javascript_include_tag script

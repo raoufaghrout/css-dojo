@@ -41,3 +41,42 @@ description: Slides for the CSS Coding Dojo held at Unruly
 [http://github.com/jahed/css-dojo](http://github.com/jahed/css-dojo)
 
 <%end%>
+
+<% slide do %>
+
+# Protip #1
+
+If you want `width` to include both `padding` and `border-width` use:
+
+```css
+* {
+    box-sizing: border-box;
+}
+```
+
+<%end%>
+
+<% slide do %>
+
+# Protip #2
+
+When laying out components, think in one-dimension.
+Layout vertically with one class then horizontally with another.
+
+```css
+.container {
+    margin: 0 auto;
+}
+
+.row {
+    margin: 20px 0;
+}
+```
+
+<%end%>
+
+<% slide do %>
+
+#Jump!
+
+<%end%>

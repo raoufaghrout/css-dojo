@@ -120,3 +120,9 @@ body {
     -ms-filter: blur(5px) brightness(0.5);
     filter: blur(5px) brightness(0.5);
 }
+
+.bottom {
+    background-color: #eeeeee;
+    color: #999999;
+    text-align: center;
+}

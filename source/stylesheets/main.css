@@ -12,8 +12,10 @@ body {
 }
 
 .container {
-    width: 900px;
+    min-width: 320px;
+    max-width: 900px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 .row {
@@ -31,6 +33,10 @@ body {
 .column {
     float:left;
     padding: 0 15px;
+}
+
+.column-full {
+    width: 100%;
 }
 
 .column-half {
@@ -56,11 +62,14 @@ body {
     color: inherit;
     text-decoration: none;
     padding: 5px 10px;
+}
+
+.top a, .top ul::before {
     border: 1px solid transparent;
     transition: border 0.3s;
 }
 
-.top a:hover {
+.top a:hover, .top ul:hover::after {
     border-color: #ffffff;
 }
 
@@ -118,4 +127,44 @@ body {
     background-color: #eeeeee;
     color: #999999;
     text-align: center;
+}
+
+@media all and (max-width: 600px) {
+    .column {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .top ul {
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        background: #333333;
+        transition: none;
+    }
+
+    .top ul li {
+        float: none;
+        text-align: right;
+    }
+
+    .top ul::after {
+        content: 'MENU';
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin:  10px;
+        line-height: 8px;
+        padding: 10px;
+    }
+
+    .top ul:hover {
+        top: 0;
+        bottom: initial;
+        transition: height 1s;
+    }
+
+    .top ul:hover::after {
+        display: none;
+    }
 }

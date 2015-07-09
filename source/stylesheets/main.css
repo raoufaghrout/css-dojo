@@ -1,6 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font: 14px/1.5em 'Arial', sans-serif;
+}
+
+.clearfix, .container, .row, .column {
+    overflow: auto;
 }
 
 .container {
@@ -8,10 +16,26 @@ body {
     margin: 0 auto;
 }
 
-.clearfix {
-    overflow: auto;
+.row {
+    margin: 20px 0;
 }
 
+.column-third {
+    float:left;
+    width: 33.33%;
+}
+
+.column {
+    padding: 0 15px;
+}
+
+.column:first-child {
+    padding-left: 0;
+}
+
+.column:last-child {
+    padding-right: 0;
+}
 
 .top {
     background: #333333;
@@ -46,4 +70,12 @@ body {
 .top ul li {
     float:left;
     margin: 0 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.full-width {
+    width: 100%;
 }

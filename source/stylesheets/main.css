@@ -17,7 +17,7 @@ body {
 }
 
 .row {
-    margin: 50px 0;
+    margin: 50px -15px;
 }
 
 .row-large {
@@ -39,14 +39,6 @@ body {
 
 .column-third {
     width: 33.33%;
-}
-
-.column:first-child {
-    padding-left: 0;
-}
-
-.column:last-child {
-    padding-right: 0;
 }
 
 .top {
@@ -100,6 +92,7 @@ body {
     position: relative;
     overflow: hidden;
     color: #eeeeee;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 .feature-bg {

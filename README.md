@@ -9,7 +9,7 @@ CSS Coding Dojo
 
 ### Setup
 ```sh
-git clone -b master --single-branch git@github.com:jahed/css-dojo.git
+git clone -b template --single-branch git@github.com:jahed/css-dojo.git
 cd css-dojo
 gem install bundler
 bundle install

@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+  font-family: ‘Arial’, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+}
+
+.container {
+	width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.top {
+  background: #333333;
+	color: #ffffff;
+  line-height: 50px;
+}
+
+.top h1 {
+	margin: 0;
+}
+
+.top ul, .top h1 {
+	float: left;
+}
+
+.top ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  margin: 0 0 0 30px;
+}
+
+.top ul li {
+	margin: 0 10px;
+  float: left;
+}
+
+.clearfix::before, .clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.top a {
+	color: inherit;
+	text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+
+.top a:hover {
+   border-color: #ffffff;
+}

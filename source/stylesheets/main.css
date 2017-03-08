@@ -57,3 +57,44 @@ body {
 .top a:hover {
    border-color: #ffffff;
 }
+
+.text-center {
+	text-align: center;
+}
+
+.column-third {
+	width: 33.33%;
+	float: left;
+}
+
+.column {
+	float: left;
+	padding: 0 15px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.row {
+	margin: 50px -15px;
+}
+
+.clearfix::before, .clearfix::after,
+.container::before, .container::after,
+.row::before, .row::after,
+.column::before, .column::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after,
+.container::after,
+.row::after,
+.column::after {
+    clear: both;
+}

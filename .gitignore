@@ -1,13 +1,7 @@
-/.bundle
+# IntelliJ
 
-/build
+.idea/
 
-/.sass-cache
-/.cache
-
-.DS_Store
+# Ruby
 
 Gemfile.lock
-
-.idea/workspace.xml
-.idea/shelf
